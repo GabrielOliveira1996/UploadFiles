@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+    app-uploadfiles:
+        build: .
+        restart: always
+        ports:
+            - "8080:8000" ## PC:Container
+        volumes:
+            - .:/var/www
+        networks:
+            - bridge_connection
+
+    db-uploadfiles:
+        image: mysql:5.7
+        restart: always
+        ports:
+            - "6306:3306"
+        environment:
+            - MYSQL_DATABASE=uploadfiles
+            - MYSQL_ROOT_PASSWORD=123
+        volumes:
+            - ./.docker/mysql/db_data:/var/lib/mysql
+        networks:
+            - bridge_connection
+
+networks:
+    bridge_connection:
+        driver: bridge
+
+volumes:
+    db_data:
