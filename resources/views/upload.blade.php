@@ -21,10 +21,10 @@
                 </div>
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-12">
-                        <input type="file" class="form-control mt-2">
+                        <input @change="handleFileUpload" type="file" class="form-control mt-2">
                     </div>
                     <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary mt-2 col-md-12">Carregar</button>
+                        <button @click="uploadFile" type="submit" class="btn btn-primary mt-2 col-md-12">Carregar</button>
                     </div>
                 </div>
             </div>
@@ -32,9 +32,10 @@
         </div>
     </div>
 </div>
-    
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{{ asset('js/upload.js') }}"></script>
 
 @endsection
