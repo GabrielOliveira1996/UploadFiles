@@ -26,10 +26,12 @@
 
     <!--Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    
     
 </head>
 
-<body>
+<body style="background-color: #212529;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
@@ -71,5 +73,8 @@
     </div>
 
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{{ asset('js/upload.js') }}"></script>
 
 </html>
