@@ -50,9 +50,15 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{ route('get.upload') }}"><img src="{{ asset('img/icons/upload.png') }}" height="24" alt=""> Subir Arquivo</a>
+                            <a class="nav-link text-white" href="{{ route('get.upload') }}"><img src="{{ asset('img/icons/upload.png') }}" height="24" width="24" /> Subir Arquivo</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#"><img src="{{ asset('img/icons/imagens-e-videos.png') }}" height="24" width="24" /> Galeria</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link text-white" href="https://github.com/GabrielOliveira1996" target="_blank"><img src="{{ asset('img/icons/github.png') }}" height="24" width="24" /> Acesse o meu github =)</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -63,21 +69,6 @@
         </main>
 
     </div>
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <span class="text-muted text-white">2023 UploadFiles</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="my-5 mx-5"><a class="text-muted text-decoration-none" href="https://github.com/GabrielOliveira1996" target="_blank"><img src="{{ asset('img/icons/github.png') }}" height="32" width="32"> Acesse o meu github =)</a></li>
-        </ul>
-    </footer>
 
 </body>
 
