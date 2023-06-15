@@ -4,20 +4,44 @@
 
 <div class="container d-flex justify-content-center">
 
-<div class="card col-md-6 m-5">
+<div class="card col-md-6 m-5" style="background-color: #252a37;">
     <div class="card-body">
         <div class="row mt-5">
 
             <div id="app">
                 <div class="row d-flex justify-content-center p-3">
                     <div class="border p-5 d-flex justify-content-center">
-                        <img src="{{ asset('img/icons/envio.png') }}" class="col-md-3">
+                        <img :src="imagePreview" class="col-md-10 rounded">
                     </div>
                 </div>
                 <div class="row mx-1 mt-2">
-                    <label>Nome: </label>
-                    <label>Tipo: </label>
-                    <label>Tamanho: </label>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="text-white">Nome: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div v-text="name" class="text-white"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="text-white">Tipo: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div v-text="type" class="text-white"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="text-white">Tamanho: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div v-text="size" class="text-white"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-12">
@@ -34,8 +58,5 @@
 </div>
 
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="{{ asset('js/upload.js') }}"></script>
 
 @endsection
