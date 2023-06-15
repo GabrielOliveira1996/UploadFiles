@@ -33,8 +33,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand text-danger" href="{{ url('/') }}">
-                    <h4><strong>{{ config('app.name', 'UploadFiles') }}</strong></h4>
+                <a class="navbar-brand text-white" href="{{ url('/') }}">
+                    <h4><strong class="brand-font">{{ config('app.name', 'UploadFiles') }}</strong></h4>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
