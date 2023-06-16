@@ -9,6 +9,7 @@ createApp({
             type: null,
             size: null,
             imagePreview: '/img/icons/envio.png',
+            loadingProgress: 0,
         };
     },
     methods: {
@@ -31,7 +32,13 @@ createApp({
             const formData = new FormData();
             formData.append('file', this.file);
 
-            axios.post('/api/upload', formData)
+            axios.post('/api/upload', formData, {
+                onUploadProgress: progressEvent => {
+                    const progress = Math.round((progressEvent.loaded / progressEvent.total) * 100);
+                    this.loadingProgress = progress;
+                    console.log(`Progresso: ${progress}%`);
+                }
+            })
                 .then(response => {
                     console.log('Arquivo enviado.');
                 })

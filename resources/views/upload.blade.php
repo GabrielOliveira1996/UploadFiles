@@ -14,6 +14,16 @@
                         <img :src="imagePreview" class="col-md-10 rounded">
                     </div>
                 </div>
+                <div class="progress">
+                    <div class="progress-bar" 
+                            role="progressbar" 
+                            :style="{ 'width': `${loadingProgress}%` }" 
+                            aria-valuenow="0" 
+                            aria-valuemin="0" 
+                            aria-valuemax="100"
+                            v-text="loadingProgress">
+                    </div>
+                </div>
                 <div class="row mx-1 mt-2">
 
                     <div class="row">
